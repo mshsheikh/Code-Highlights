@@ -7,7 +7,7 @@ import {
   FaYoutube,
   FaGithub,
 } from "react-icons/fa";
-
+import { motion } from "framer-motion";
 import { useState, useMemo } from "react";
 import { ProjectCard } from "./components/ProjectCard";
 import { projects as allProjects, Project } from "./data/projects";
@@ -52,23 +52,31 @@ export default function HomePage() {
 
   return (
     <main className="min-h-screen bg-gradient-to-br from-[#171236] to-[#962b2b] flex flex-col items-center py-16 px-4">
-      {/* Hero header */}
-      <div className="text-center mb-4 max-w-xl">
+      {/* Hero Section */}
+      <section className="text-center mb-4 max-w-xl">
         <h1 className="text-white text-5xl font-extrabold drop-shadow-lg mb-2">
           Code Highlights
         </h1>
         <p className="text-white text-lg opacity-90">
-          A curated showcase of my latest and greatest work.
+          An expertly crafted collection of my most recent projects.
         </p>
-      </div>
+      </section>
 
-      {/* Sort dropdown */}
-      <div className="w-full max-w-6xl mb-8 flex items-center justify-items-center px-4 space-x-2">
-        <span className="text-white font-medium">Sort:</span>
+      {/* Sort Dropdown */}
+      <motion.div
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.3 }}
+        className="w-full max-w-6xl mb-8 flex items-center justify-end px-4"
+      >
+        <label htmlFor="sort-projects" className="text-white font-medium mr-2">
+          Sort:
+        </label>
         <select
+          id="sort-projects"
           value={sortKey}
           onChange={(e) => setSortKey(e.target.value)}
-          className="bg-white text-gray-800 px-3 py-1 rounded-md shadow focus:outline-none"
+          className="bg-white text-gray-800 px-3 py-1 rounded-md shadow focus:outline-none focus:ring-2 focus:ring-purple-400"
         >
           {sortOptions.map((opt) => (
             <option key={opt.value} value={opt.value}>
@@ -76,19 +84,30 @@ export default function HomePage() {
             </option>
           ))}
         </select>
-      </div>
+      </motion.div>
 
-      {/* Projects grid */}
-      <div className="w-full max-w-6xl grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+      {/* Projects Grid */}
+      <section
+        aria-label="Projects Grid"
+        className="w-full max-w-6xl grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4"
+      >
         {sortedProjects.map((proj: Project) => (
-          <ProjectCard key={proj.id} project={proj} />
+          <motion.div
+            key={proj.id}
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.4 }}
+          >
+            <ProjectCard project={proj} />
+          </motion.div>
         ))}
-      </div>
+      </section>
 
+      {/* Footer */}
       <footer className="w-full mt-16 pt-12 pb-6">
         <div className="max-w-6xl mx-auto px-4 flex flex-col items-center gap-6">
           {/* Social Icons */}
-          <div className="flex gap-6">
+          <nav aria-label="Social Media" className="flex gap-6">
             {[
               {
                 icon: <FaFacebook />,
@@ -127,15 +146,15 @@ export default function HomePage() {
                 <span className="text-2xl md:text-3xl">{icon}</span>
               </a>
             ))}
-          </div>
+          </nav>
 
           {/* Copyright */}
-          <div className="text-center text-white text-sm opacity-90">
-            &copy; {new Date().getFullYear()} <strong>Code Highlights</strong>{" "}
-            by Muhammad Salman Hussain.
+          <p className="text-center text-white text-sm opacity-90">
+            &copy; {new Date().getFullYear()}{" "}
+            <strong>Code Highlights</strong> by Muhammad Salman Hussain.
             <br />
             All Rights Reserved.
-          </div>
+          </p>
         </div>
       </footer>
     </main>

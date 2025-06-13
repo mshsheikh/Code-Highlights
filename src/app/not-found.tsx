@@ -6,7 +6,7 @@ export const metadata = {
 
 export default function NotFound() {
   return (
-    <div className="h-screen w-full bg-gradient-to-br from-blue-600 to-purple-700 flex flex-col items-center justify-center px-4">
+    <div className="h-screen w-full bg-gradient-to-br from-[#171236] to-[#962b2b] flex flex-col items-center justify-center px-4">
       <div className="max-w-md text-center">
         {/* Large “404” title */}
         <h1 className="text-white text-6xl font-extrabold drop-shadow-lg mb-6">
@@ -32,7 +32,7 @@ export default function NotFound() {
 
         {/* Explanatory text */}
         <p className="text-white text-lg mb-8">
-          Oops! Looks like you’ve wandered off the beaten path.
+          Sorry, we couldn’t find the page you’re looking for.
         </p>
 
         {/* Button back home */}
@@ -41,7 +41,7 @@ export default function NotFound() {
           className="
             inline-block
             bg-white
-            text-purple-700
+            text-black
             font-semibold
             px-6
             py-3
@@ -49,8 +49,8 @@ export default function NotFound() {
             shadow-lg
             transition
             duration-200
-            hover:bg-purple-100
-            hover:text-purple-600
+            hover:bg-purple-600
+            hover:text-white
           "
         >
           Go Back Home

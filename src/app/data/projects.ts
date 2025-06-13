@@ -13,7 +13,7 @@ export const projects: Project[] = [
   {
     id: "1",
     title: "Quizverse",
-    date: "6-JAN-2025",
+    date: "24-JAN-2025",
     author: "Salman",
     imageUrl: "/projects/quizverse.png",
     href: "https://quizverse-mshsheikh.vercel.app/",
@@ -23,7 +23,7 @@ export const projects: Project[] = [
   {
     id: "2",
     title: "The Adventure Bee",
-    date: "20-FEB-2025",
+    date: "5-JUN-2024",
     author: "Salman",
     imageUrl: "/projects/the-adventure-bee.png",
     href: "https://tab-mshsheikh.vercel.app/",
@@ -33,7 +33,7 @@ export const projects: Project[] = [
   {
     id: "3",
     title: "Sun & Celsius",
-    date: "13-JAN-2024",
+    date: "15-JUN-2024",
     author: "Salman",
     imageUrl: "/projects/snc.png",
     href: "https://snc-mshsheikh.vercel.app/",
@@ -43,7 +43,7 @@ export const projects: Project[] = [
   {
     id: "4",
     title: "Furniro | E-commerce",
-    date: "22-JAN-2025",
+    date: "9-DEC-2024",
     author: "Salman",
     imageUrl: "/projects/furniro.png",
     href: "https://furniro-mshsheikh.vercel.app/",
@@ -52,8 +52,8 @@ export const projects: Project[] = [
   },
   {
     id: "5",
-    title: "NextWave by MSH",
-    date: "3-JAN-2025",
+    title: "NextWave | Blog App",
+    date: "1-JAN-2025",
     author: "Salman",
     imageUrl: "/projects/nextwave-blog-app.png",
     href: "https://nextwave-by-msh.vercel.app/",
@@ -62,7 +62,7 @@ export const projects: Project[] = [
   },
   {
     id: "6",
-    title: "Animated Pokémon Cards",
+    title: "Pokémon Cards",
     date: "7-FEB-2025",
     author: "Salman",
     imageUrl: "/projects/pokemon-cards.png",
@@ -83,7 +83,7 @@ export const projects: Project[] = [
   {
     id: "8",
     title: "Countdown Timer",
-    date: "22-DEC-2024",
+    date: "13-SEP-2024",
     author: "Salman",
     imageUrl: "/projects/countdown-timer.png",
     href: "https://countdown-mshsheikh.vercel.app/",
@@ -93,7 +93,7 @@ export const projects: Project[] = [
   {
     id: "9",
     title: "Task Manager",
-    date: "15-DEC-2024",
+    date: "14-DEC-2024",
     author: "Salman",
     imageUrl: "/projects/task-manager.png",
     href: "https://task-manager-mshsheikh.vercel.app/",
@@ -102,8 +102,8 @@ export const projects: Project[] = [
   },
   {
     id: "10",
-    title: "Rocket Resume Builder",
-    date: "10-NOV-2024",
+    title: "Rocket | Resume Builder",
+    date: "8-SEP-2024",
     author: "Salman",
     imageUrl: "/projects/rocket-resume-builder.png",
     href: "https://rocket-resume-frontend.vercel.app/",
@@ -112,8 +112,8 @@ export const projects: Project[] = [
   },
   {
     id: "11",
-    title: "Simple Modern Calculator",
-    date: "22-DEC-2024",
+    title: "Modern Calculator",
+    date: "7-SEP-2024",
     author: "Salman",
     imageUrl: "/projects/simple-modern-calc.png",
     href: "https://mshsheikh.github.io/Simple-Modern-Calculator/",
@@ -122,7 +122,7 @@ export const projects: Project[] = [
   },
   {
     id: "12",
-    title: "Animated Video Cards",
+    title: "Video Cards",
     date: "11-JAN-2025",
     author: "Salman",
     imageUrl: "/projects/ani-vid-cards.png",
